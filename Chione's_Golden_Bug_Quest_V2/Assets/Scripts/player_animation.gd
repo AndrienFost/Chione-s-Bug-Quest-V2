@@ -6,12 +6,11 @@ extends Node2D
 
 func _process(delta):
 	var direction = Input.get_axis("move_right", "move_left")
-	var one = 1 + (0 * delta)
 	# Flip the sprite based on direction
 	if direction > 0:
-		$Sprite2D.scale.x = one # Face right (default)
+		$Sprite2D.scale.x = 1  # Face right (default)
 	elif direction < 0:
-		$Sprite2D.scale.x = -one  # Face left
+		$Sprite2D.scale.x = -1  # Face left
 	# Plays the walking/idle animations
 	if abs(player_controls.velocity.x) > 15.0:
 		player_animation.play("Walk")

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dhuq1oairu1t0"]
 
-[ext_resource type="Script" uid="uid://c7aony0pfphip" path="res://Assets/Scripts/main_menu.gd" id="1_cbhea"]
+[ext_resource type="Script" uid="uid://c7aony0pfphip" path="res://Assets/Scenes/main_menu.gd" id="1_cbhea"]
 [ext_resource type="Texture2D" uid="uid://v0g0wjrvmnwx" path="res://Assets/Sprites/BackGround1.png" id="1_fsbqx"]
 [ext_resource type="FontFile" uid="uid://2hifxt076mrn" path="res://Assets/Sprites/Lorestta.ttf" id="2_cbhea"]
 
