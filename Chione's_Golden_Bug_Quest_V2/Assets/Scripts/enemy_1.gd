@@ -17,6 +17,6 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
-func _on_walkeble_controller_area_entered(body):
+func _on_walkeble_controller_body_entered(body):
 	if body.is_in_group("tiles"):
 		print("Collided with a tile!")
