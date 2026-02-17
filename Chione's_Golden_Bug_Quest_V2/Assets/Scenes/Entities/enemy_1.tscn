@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dfn7st12kbnm5"]
+
+[ext_resource type="Script" uid="uid://dpqythvtbvrsv" path="res://Assets/Scripts/enemy_1.gd" id="1_fj0ms"]
+[ext_resource type="Texture2D" uid="uid://d3gp5s7oqmjv3" path="res://icon.svg" id="1_iisd7"]
+[ext_resource type="Script" uid="uid://cu6mevrxgcik8" path="res://Assets/Scripts/walkeble_controller.gd" id="3_3l1ta"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cldej"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rvl1d"]
+size = Vector2(3, 6)
+
+[node name="Enemy_1" type="CharacterBody2D" unique_id=487160319]
+script = ExtResource("1_fj0ms")
+
+[node name="EnemyAnimation" type="Node2D" parent="." unique_id=2145069879]
+
+[node name="Sprite2D" type="Sprite2D" parent="EnemyAnimation" unique_id=1105441101]
+position = Vector2(-1.1920929e-07, 1.1920929e-07)
+scale = Vector2(0.16601564, 0.16601564)
+texture = ExtResource("1_iisd7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="EnemyAnimation" unique_id=98514527]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=352164035]
+shape = SubResource("RectangleShape2D_cldej")
+
+[node name="WalkebleController" type="Area2D" parent="." unique_id=685272358 groups=["Enemy"]]
+script = ExtResource("3_3l1ta")
+
+[node name="CollisionWall" type="CollisionShape2D" parent="WalkebleController" unique_id=652679969]
+position = Vector2(-12.5, 0)
+shape = SubResource("RectangleShape2D_rvl1d")
+
+[connection signal="area_entered" from="WalkebleController" to="." method="_on_walkeble_controller_area_entered"]
+[connection signal="body_entered" from="WalkebleController" to="." method="_on_walkeble_controller_body_entered"]

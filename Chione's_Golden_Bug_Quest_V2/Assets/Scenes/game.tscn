@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cfntrs45gqjnw"]
+
+[ext_resource type="Script" uid="uid://c3bq4h1mlw3rv" path="res://Assets/Scripts/main_scene.gd" id="1_pfbgl"]
+[ext_resource type="PackedScene" uid="uid://dbyvuj1uw4cx7" path="res://Assets/Scenes/player.tscn" id="2_lcp10"]
+
+[node name="Game" type="Node" unique_id=390214879]
+
+[node name="Main Scene" type="Control" parent="." unique_id=804686083]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_pfbgl")
+area1_path = "res://Assets/Scenes/Area/area_1.tscn"
+area2_path = "res://Assets/Scenes/Area/area_2.tscn"
+area3_path = "res://Assets/Scenes/Area/area_3.tscn"
+
+[node name="Player" parent="Main Scene" unique_id=1914732771 instance=ExtResource("2_lcp10")]
+
+[node name="Area" type="Node2D" parent="Main Scene" unique_id=1458326884]
+z_index = -10
+
+[node name="UI" type="Control" parent="." unique_id=390429679]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

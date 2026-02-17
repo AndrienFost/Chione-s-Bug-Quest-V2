@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://wns2egq6etqc"]
+
+[ext_resource type="Texture2D" uid="uid://d3gp5s7oqmjv3" path="res://icon.svg" id="1_p8lh1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xe5hx"]
+
+[node name="box" type="StaticBody2D" unique_id=1306499091]
+
+[node name="BoxAnimation" type="Node2D" parent="." unique_id=1935953544]
+
+[node name="Sprite2D" type="Sprite2D" parent="BoxAnimation" unique_id=12297357]
+position = Vector2(-1.1920929e-07, 1.1920929e-07)
+scale = Vector2(0.16601564, 0.16601564)
+texture = ExtResource("1_p8lh1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BoxAnimation" unique_id=739891274]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=912435432]
+shape = SubResource("RectangleShape2D_xe5hx")

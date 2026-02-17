@@ -1,0 +1,138 @@
+[gd_scene format=3 uid="uid://dhuq1oairu1t0"]
+
+[ext_resource type="Script" uid="uid://c7aony0pfphip" path="res://Assets/Scenes/main_menu.gd" id="1_cbhea"]
+[ext_resource type="Texture2D" uid="uid://v0g0wjrvmnwx" path="res://Assets/Sprites/BackGround1.png" id="1_fsbqx"]
+[ext_resource type="FontFile" uid="uid://2hifxt076mrn" path="res://Assets/Sprites/Lorestta.ttf" id="2_cbhea"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tanm1"]
+texture = ExtResource("1_fsbqx")
+modulate_color = Color(0.4911909, 0.4911909, 0.4911909, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6qsvb"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fsbqx"]
+bg_color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cbhea"]
+bg_color = Color(0.41674656, 0.4167466, 0.41674656, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tanm1"]
+
+[node name="MainMenu" type="Control" unique_id=1040957172]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_cbhea")
+
+[node name="Panel" type="Panel" parent="." unique_id=328422209]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_tanm1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=673417324]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -440.5
+offset_top = -217.0
+offset_right = 440.5
+offset_bottom = 354.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 32
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1685034673]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_6qsvb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fsbqx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cbhea")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tanm1")
+text = "Start Game"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1763583235]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_6qsvb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fsbqx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cbhea")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tanm1")
+text = "Options"
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=2090507861]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_6qsvb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fsbqx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cbhea")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tanm1")
+text = "Exit"
+
+[node name="Label" type="Label" parent="." unique_id=1324718334]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -522.5
+offset_top = -484.0
+offset_right = 522.5
+offset_bottom = -287.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 12
+theme_override_fonts/font = ExtResource("2_cbhea")
+theme_override_font_sizes/font_size = 118
+text = "Chione's Golden Bug Quest"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_exit_pressed"]
